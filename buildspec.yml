@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo install serverless.....
+      - npm install -g serverless
+  
+  pre_build:
+    commands:
+      - echo install npm dependencies, if any.....
+      - npm install 
+  
+  build:
+    commands:
+      - echo deployment start on `date` # `date` will display the actual DATE
+      - echo deployment with serverless framework
+      - sls deploy -v -s $ENV_NAME  # ENV_NAME is the environment variable set at CodeBuild, regarding to sls deploy ref: https://serverless.com/framework/docs/providers/aws/cli-reference/deploy/
+  
+  post_build:
+    commands:
+      - echo deployment completed on `date`   # if any of the above steps fail, it won't reach to the next step
