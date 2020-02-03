@@ -6,7 +6,7 @@ module.exports.log = async event => {
     body: JSON.stringify(
       {
         message: 'AWS CI/CD Testing!',
-        version: '2.0',
+        version: '3.0',
         timestamp: Date.now()
       }
     ),
