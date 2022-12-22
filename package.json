@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/kaings-aws-serverless/cicd-1#readme",
   "devDependencies": {
-    "serverless-offline": "^5.12.1"
+    "serverless-offline": "^12.0.3"
   }
 }
